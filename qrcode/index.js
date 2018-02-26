@@ -13,7 +13,7 @@ const base_page = `
 	<meta charset='utf-8'>
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/bracket/assets/css/style.css?v=a666bcb001a438d4f0ead39f0dcea76f3fe7038f">
+	<link rel="stylesheet" href="https://phodal.github.io/bracket/assets/css/style.css?v=a666bcb001a438d4f0ead39f0dcea76f3fe7038f">
 
 	<!-- Begin Jekyll SEO tag v2.3.0 -->
 <title>bracket | A Serverless IoT Server for Fun</title>
