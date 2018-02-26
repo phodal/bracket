@@ -45,19 +45,19 @@ functions:
     handler: qrcode/index.on
     events:
       - http:
-          path: /q/{device}/on
+          path: /q/{uuid}/on
           method: get
   off:
     handler: qrcode/index.off
     events:
       - http:
-          path: /q/{device}/off
+          path: /q/{uuid}/off
           method: get
   status:
     handler: qrcode/index.status
     events:
       - http:
-          path: /q/{device}/status
+          path: /q/{uuid}/status
           method: get
 
 resources:
