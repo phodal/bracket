@@ -39,13 +39,13 @@ functions:
     handler: qrcode/index.on
     events:
       - http:
-          path: /q/
+          path: /q/{device}/on
           method: get
   off:
     handler: qrcode/index.off
     events:
       - http:
-          path: /q/{device}
+          path: /q/{device}/off
           method: get
   status:
     handler: qrcode/index.status
