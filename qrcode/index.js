@@ -21,9 +21,9 @@ module.exports.on = (event, context, callback) => {
     Key: {
       "uuid": uuid
     },
-    UpdateExpression: "set status=:s",
+    UpdateExpression: "SET devices_status=:s",
     ExpressionAttributeValues:{
-      ":s": "1"
+      ":s": 1
     },
     ReturnValues:"UPDATED_NEW"
   };
@@ -44,7 +44,8 @@ module.exports.on = (event, context, callback) => {
       callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-          results: "UpdateItem succeeded:" + JSON.stringify(data, null, 2),
+          results: "UpdateItem succeeded:",
+          data: data
         })
       });
     }
@@ -58,9 +59,9 @@ module.exports.off = (event, context, callback) => {
     Key: {
       "uuid": uuid
     },
-    UpdateExpression: "set status=:s",
+    UpdateExpression: "SET devices_status=:s",
     ExpressionAttributeValues:{
-      ":s": "0"
+      ":s": 0
     },
     ReturnValues:"UPDATED_NEW"
   };
@@ -81,7 +82,8 @@ module.exports.off = (event, context, callback) => {
       callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-          results: "UpdateItem succeeded:" + JSON.stringify(data, null, 2),
+          results: "UpdateItem succeeded",
+          data: data
         })
       });
     }
@@ -89,12 +91,31 @@ module.exports.off = (event, context, callback) => {
 };
 
 module.exports.status = (event, context, callback) => {
-  console.log('status');
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify({
-      action: 'status',
-      input: context,
-    })
+  const uuid = event.pathParameters.uuid;
+  const params = {
+    TableName: tableName,
+    Key: {
+      uuid: uuid,
+    },
+  };
+
+  docClient.get(params, (error, result) => {
+    // handle potential errors
+    if (error) {
+      console.error(error);
+      callback(null, {
+        statusCode: error.statusCode || 501,
+        headers: { 'Content-Type': 'text/plain' },
+        body: 'Couldn\'t fetch the todo item.',
+      });
+      return;
+    }
+
+    // create a response
+    const response = {
+      statusCode: 200,
+      body: JSON.stringify(result.Item),
+    };
+    callback(null, response);
   });
 };

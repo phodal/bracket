@@ -16,7 +16,7 @@ module.exports.handler = (event, context, callback) => {
       Item: {
         uuid: uuid,
         type: 'qrcode',
-        status: 0
+        devices_status: 0
       },
       Expected: {
         uuid: {Exists: false}
