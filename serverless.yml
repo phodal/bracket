@@ -36,6 +36,12 @@ functions:
       - http:
           path: /q/
           method: get
+  base:
+    handler: qrcode/index.status
+    events:
+      - http:
+          path: /q/{uuid}
+          method: get
   create:
     handler: qrcode/create.handler
     events:
