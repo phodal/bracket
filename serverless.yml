@@ -43,7 +43,7 @@ functions:
           path: /q/
           method: get
   base:
-    handler: qrcode/index.status
+    handler: qrcode/update.status
     events:
       - http:
           path: /q/{uuid}
@@ -55,19 +55,19 @@ functions:
           path: /q/
           method: post
   on:
-    handler: qrcode/index.on
+    handler: qrcode/update.on
     events:
       - http:
           path: /q/{uuid}/on
           method: get
   off:
-    handler: qrcode/index.off
+    handler: qrcode/update.off
     events:
       - http:
           path: /q/{uuid}/off
           method: get
   status:
-    handler: qrcode/index.status
+    handler: qrcode/update.status
     events:
       - http:
           path: /q/{uuid}/status

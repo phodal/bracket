@@ -1,0 +1,66 @@
+<html lang="zh-cmn-Hans">
+<head>
+  <title>A Serverless IoT Server for Fun</title>
+  <meta http-equiv="content-language" content="zh-CN"/>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Phodal, URL Shorter, shorter">
+  <meta name="description" content="A Serverless IoT Server for Fun">
+  <link href="https://phodal.github.io/mifa/mifa.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="bracket"><a href="https://github.com/phodal/bracket">bracket</a></h1>
+
+<p>A Serverless IoT Server for Fun</p>
+
+<p><strong>Features</strong></p>
+
+<ul>
+  <li>QRCode</li>
+
+  <li>On/Off Toggle</li>
+
+  <li>JSON support</li>
+
+  <li>Wechat Login</li>
+</ul>
+
+<h2 id="onofftoggle">ON/Off Toggle </h2>
+
+<p>Action | HTTP Method | URL
+  ---------|---------------|--------
+  create | POST | /q
+  on | GET | /q/{device<em>id}/on
+    off | GET | /q/{device</em>id}/off
+  status | GET | /q/{device<em>id}
+    status | GET | /q/{device</em>id}/status</p>
+
+<h2 id="setup">Setup</h2>
+
+<pre><code>npm install -g serverless
+</code></pre>
+
+<p>1.install</p>
+
+<pre><code>yarn install
+</code></pre>
+
+<p>2.create domain</p>
+
+<pre><code>sls create_domain
+</code></pre>
+
+<p>3.deloy</p>
+
+<pre><code>sls deploy
+</code></pre>
+
+<h2 id="license">LICENSE</h2>
+
+<p><a href="http://ideas.phodal.com/"><img src="http://brand.phodal.com/shields/idea-small.svg"
+                                           alt="Phodal's Idea"/></a></p>
+
+<p>© 2018 A <a href="https://www.phodal.com">Phodal Huang</a>'s <a href="http://github.com/phodal/ideas">Idea</a>. This
+  code is distributed under the MIT license. See <code>LICENSE</code> in this directory.</p>
+</body>
+</html>
