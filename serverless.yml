@@ -31,6 +31,12 @@ provider:
 
 functions:
   main:
+    handler: main/index.handler
+    events:
+      - http:
+          path: /
+          method: get
+  qrcode:
     handler: qrcode/index.main
     events:
       - http:
