@@ -35,6 +35,12 @@ functions:
       - http:
           path: /q/
           method: get
+  create:
+    handler: qrcode/create.handler
+    events:
+      - http:
+          path: /q/
+          method: post
   on:
     handler: qrcode/index.on
     events:
@@ -61,10 +67,10 @@ resources:
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          - AttributeName: slug
+          - AttributeName: uuid
             AttributeType: S
         KeySchema:
-          - AttributeName: slug
+          - AttributeName: uuid
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
