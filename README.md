@@ -9,6 +9,17 @@ A Serverless IoT Server for Fun
  - JSON support
  - Wechat Login
 
+ON/Off Toggle 
+---
+
+Action   |  HTTP Method  |  URL
+---------|---------------|--------
+create   | POST          | /q
+on       | GET           | /q/{device_id}/on
+off      | GET           | /q/{device_id}/off
+status   | GET           | /q/{device_id}
+status   | GET           | /q/{device_id}/status
+
 Setup
 ---
 
