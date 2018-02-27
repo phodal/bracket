@@ -9,16 +9,16 @@ A Serverless IoT Server for Fun
  - Wechat Control
  - AWS IoT?
 
-ON/Off Toggle 
+On/Off Toggle 
 ---
 
-Action   |  HTTP Method  |  URL
----------|---------------|--------
-create   | POST          | /q
-on       | GET           | /q/{device_id}/on
-off      | GET           | /q/{device_id}/off
-status   | GET           | /q/{device_id}
-status   | GET           | /q/{device_id}/status
+Action   |  HTTP Method  |  URL                   | Response
+---------|---------------|------------------------|---------------
+create   | POST          | /q                     | {"uuid":"HyOPYVfOf"}
+on       | GET           | /q/{device_id}/on      | {"results":"succeeded","status":1}
+off      | GET           | /q/{device_id}/off     | {"results":"succeeded","status":0}
+status   | GET           | /q/{device_id}         | {"status":0}
+status   | GET           | /q/{device_id}/status  | {"status":0}
 
 Setup
 ---
