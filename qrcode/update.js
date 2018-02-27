@@ -33,8 +33,8 @@ module.exports.on = (event, context, callback) => {
       callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-          results: "UpdateItem succeeded:",
-          data: data
+          results: "succeeded",
+          status: data.Attributes.devices_status
         })
       });
     }
@@ -71,8 +71,8 @@ module.exports.off = (event, context, callback) => {
       callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-          results: "UpdateItem succeeded",
-          data: data
+          results: "succeeded",
+          status: data.Attributes.devices_status
         })
       });
     }
@@ -89,7 +89,6 @@ module.exports.status = (event, context, callback) => {
   };
 
   docClient.get(params, (error, result) => {
-    // handle potential errors
     if (error) {
       console.error(error);
       callback(null, {
@@ -100,10 +99,12 @@ module.exports.status = (event, context, callback) => {
       return;
     }
 
-    // create a response
+    console.log(result);
     const response = {
       statusCode: 200,
-      body: JSON.stringify(result.Item),
+      body: JSON.stringify({
+        status: result.Item.devices_status
+      }),
     };
     callback(null, response);
   });

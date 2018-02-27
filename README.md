@@ -4,10 +4,10 @@ A Serverless IoT Server for Fun
 
 **Features**
 
- - QRCode
  - On/Off Toggle
  - JSON support
- - Wechat Login
+ - Wechat Control
+ - AWS IoT?
 
 ON/Off Toggle 
 ---
