@@ -35,7 +35,7 @@ const base_page = `
 
 	<nav class="navigation">
 		<section class="container">
-			<a class="navigation-title" href="https://github.com/phodal/mifa">
+			<a class="navigation-title" href="https://github.com/phodal/bracket">
 			<h1 class="title">bracket</h1></a>
 			<a href="https://github.com/phodal/bracket" title="bracket on Github" target="_blank">
 				<svg class="octocat" viewBox="0 0 250 250">
@@ -70,7 +70,7 @@ const base_page = `
   <li>Wechat Login</li>
 </ul>
 
-<h2 id="onoff-toggle">ON/Off Toggle</h2>
+<h2 id="onoff-toggle">On/Off Toggle</h2>
 
 <table>
   <thead>
