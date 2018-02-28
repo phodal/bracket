@@ -1,4 +1,4 @@
-# bracket
+# Bracket
 
 A Serverless IoT Server for Fun
 
@@ -19,6 +19,34 @@ on       | GET           | /q/{device_id}/on      | {"results":"succeeded","stat
 off      | GET           | /q/{device_id}/off     | {"results":"succeeded","status":0}
 status   | GET           | /q/{device_id}         | {"status":0}
 status   | GET           | /q/{device_id}/status  | {"status":0}
+
+### Examples
+
+**Create**
+
+```
+$ curl -X POST https://iot.pho.im/q
+
+{"uuid":"H1qG3tQ_M"}
+```
+
+**On/Off**
+
+```
+$ curl -X GET https://iot.pho.im/q/H1qG3tQ_M/on
+
+
+{"results":"succeeded","status":1}
+```
+
+**Status**
+
+```
+$ curl -X GET curl -X GET https://iot.pho.im/q/H1qG3tQ_M/status
+
+
+{"status":1}
+```
 
 Setup
 ---
