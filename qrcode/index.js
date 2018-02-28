@@ -16,7 +16,7 @@ const base_page = `
 	<link rel="stylesheet" href="https://phodal.github.io/bracket/assets/css/style.css?v=a666bcb001a438d4f0ead39f0dcea76f3fe7038f">
 
 	<!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>bracket | A Serverless IoT Server for Fun</title>
+<title>Bracket | A Serverless IoT Server for Fun</title>
 <meta property="og:title" content="bracket" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A Serverless IoT Server for Fun" />
@@ -36,7 +36,7 @@ const base_page = `
 	<nav class="navigation">
 		<section class="container">
 			<a class="navigation-title" href="https://github.com/phodal/bracket">
-			<h1 class="title">bracket</h1></a>
+			<h1 class="title">Bracket</h1></a>
 			<a href="https://github.com/phodal/bracket" title="bracket on Github" target="_blank">
 				<svg class="octocat" viewBox="0 0 250 250">
 					<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -50,14 +50,14 @@ const base_page = `
 	</nav>
 	<header class="header" id="home">
 		<section class="container">
-			<h1>bracket</h1>
+			<h1>Bracket</h1>
 			<h2>A Serverless IoT Server for Fun</h2>
 		</section>
 	</header>
 
 	<div class="container">
 		<section id="main_content">
-			<h1 id="bracket">bracket</h1>
+			<h1 id="bracket">Bracket</h1>
 
 <p>A Serverless IoT Server for Fun</p>
 
@@ -70,7 +70,7 @@ const base_page = `
   <li>Wechat Login</li>
 </ul>
 
-<h2 id="onoff-toggle">On/Off Toggle</h2>
+<h2 id="onoff-toggle">On/Off Toggle API</h2>
 
 <table>
   <thead>
